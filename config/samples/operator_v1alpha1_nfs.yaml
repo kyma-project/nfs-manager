@@ -1,0 +1,12 @@
+apiVersion: operator.kyma-project.io/v1alpha1
+kind: Nfs
+metadata:
+  labels:
+    app.kubernetes.io/name: nfs
+    app.kubernetes.io/instance: nfs-sample
+    app.kubernetes.io/part-of: nfs-manager
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: nfs-manager
+  name: nfs-sample
+spec:
+  # TODO(user): Add fields here

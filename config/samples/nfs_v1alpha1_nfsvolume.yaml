@@ -1,0 +1,14 @@
+apiVersion: nfs.kyma-project.io/v1alpha1
+kind: NfsVolume
+metadata:
+  labels:
+    app.kubernetes.io/name: nfsvolume
+    app.kubernetes.io/instance: nfsvolume-sample
+    app.kubernetes.io/part-of: nfs-manager
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: nfs-manager
+  name: nfsvolume-sample
+spec:
+  capacity:
+    storage: 3Gi
+  reclaimPolicy: Retain
