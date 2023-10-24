@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- nfs_v1alpha1_nfsvolume.yaml
+- operator_v1alpha1_nfs.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

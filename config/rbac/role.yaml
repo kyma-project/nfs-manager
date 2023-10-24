@@ -1,0 +1,58 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - nfs.kyma-project.io
+  resources:
+  - nfsvolumes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - nfs.kyma-project.io
+  resources:
+  - nfsvolumes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - nfs.kyma-project.io
+  resources:
+  - nfsvolumes/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - operator.kyma-project.io
+  resources:
+  - nfs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - operator.kyma-project.io
+  resources:
+  - nfs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - operator.kyma-project.io
+  resources:
+  - nfs/status
+  verbs:
+  - get
+  - patch
+  - update
